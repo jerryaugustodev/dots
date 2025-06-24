@@ -1,0 +1,447 @@
+* {
+	all: unset;
+	font-size: 10px;
+	font-family: "JetBrainsMono Nerd Font";
+	transition: 200ms;
+}
+
+trough highlight {
+	background: #c8c093;
+}
+
+scale trough {
+	margin: 0rem 0.5rem;
+	background-color: #363646;
+	min-height: 8px;
+	min-width: 70px;
+}
+
+slider {
+	background-color: #7fb4ca;
+}
+
+.floating-notifications.background .notification-row .notification-background {
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #363646;
+	border-radius: 12.6px;
+	margin: 18px;
+	background-color: #1f1f28;
+	color: #c8c093;
+	padding: 0;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification {
+	padding: 5px;
+	border-radius: 12.6px;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification.critical {
+	box-shadow: inset 0 0 7px 0 #e46876;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification
+	.notification-content {
+	margin: 7px;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification
+	.notification-content
+	.summary {
+	color: #c8c093;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification
+	.notification-content
+	.time {
+	color: #a3d4d5;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification
+	.notification-content
+	.body {
+	color: #c8c093;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification
+	> *:last-child
+	> * {
+	min-height: 3.4em;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification
+	> *:last-child
+	> *
+	.notification-action {
+	border-radius: 7px;
+	color: #c8c093;
+	background-color: #363646;
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	margin: 7px;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification
+	> *:last-child
+	> *
+	.notification-action:hover {
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	background-color: #363646;
+	color: #c8c093;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.notification
+	> *:last-child
+	> *
+	.notification-action:active {
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	background-color: #658594;
+	color: #c8c093;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.close-button {
+	margin: 7px;
+	padding: 2px;
+	border-radius: 6.3px;
+	color: #1f1f28;
+	background-color: #e46876;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.close-button:hover {
+	background-color: #ff5d62;
+	color: #1f1f28;
+}
+
+.floating-notifications.background
+	.notification-row
+	.notification-background
+	.close-button:active {
+	background-color: #e46876;
+	color: #1f1f28;
+}
+
+.control-center {
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.8), inset 0 0 0 1px #363646;
+	border-radius: 12.6px;
+	margin: 18px;
+	background-color: #1f1f28;
+	color: #c8c093;
+	padding: 10px;
+}
+
+.control-center .widget-title > label {
+	color: #c8c093;
+	font-size: 1.3em;
+}
+
+.control-center .widget-title button {
+	border-radius: 7px;
+	color: #c8c093;
+	background-color: #363646;
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	padding: 4px;
+}
+
+.control-center .widget-title button:hover {
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	background-color: #54546d;
+	color: #c8c093;
+}
+
+.control-center .widget-title button:active {
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	background-color: #658594;
+	color: #1f1f28;
+}
+
+.control-center .notification-row .notification-background {
+	border-radius: 7px;
+	color: #c8c093;
+	background-color: #363646;
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	margin-top: 10px;
+}
+
+.control-center .notification-row .notification-background .notification {
+	padding: 7px;
+	border-radius: 7px;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.notification.critical {
+	box-shadow: inset 0 0 7px 0 #e46876;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.notification
+	.notification-content {
+	margin: 7px;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.notification
+	.notification-content
+	.summary {
+	color: #c8c093;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.notification
+	.notification-content
+	.time {
+	color: #a3d4d5;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.notification
+	.notification-content
+	.body {
+	color: #c8c093;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.notification
+	> *:last-child
+	> * {
+	min-height: 3.4em;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.notification
+	> *:last-child
+	> *
+	.notification-action {
+	border-radius: 7px;
+	color: #c8c093;
+	background-color: #16161d;
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	margin: 7px;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.notification
+	> *:last-child
+	> *
+	.notification-action:hover {
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	background-color: #363646;
+	color: #c8c093;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.notification
+	> *:last-child
+	> *
+	.notification-action:active {
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	background-color: #658594;
+	color: #c8c093;
+}
+
+.control-center .notification-row .notification-background .close-button {
+	margin: 7px;
+	padding: 2px;
+	border-radius: 6.3px;
+	color: #1f1f28;
+	background-color: #ff5d62;
+}
+
+.close-button {
+	border-radius: 6.3px;
+}
+
+.control-center .notification-row .notification-background .close-button:hover {
+	background-color: #e46876;
+	color: #1f1f28;
+}
+
+.control-center
+	.notification-row
+	.notification-background
+	.close-button:active {
+	background-color: #e46876;
+	color: #1f1f28;
+}
+
+.control-center .notification-row .notification-background:hover {
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	background-color: #6a9589;
+	color: #c8c093;
+}
+
+.control-center .notification-row .notification-background:active {
+	box-shadow: inset 0 0 0 1px #2d4f67;
+	background-color: #658594;
+	color: #c8c093;
+}
+
+.notification.critical progress {
+	background-color: #e46876;
+}
+
+.notification.low progress,
+.notification.normal progress {
+	background-color: #7fb4ca;
+}
+
+.control-center-dnd {
+	margin-top: 5px;
+	border-radius: 8px;
+	background: #363646;
+	border: 1px solid #2d4f67;
+	box-shadow: none;
+}
+
+.control-center-dnd:checked {
+	background: #363646;
+}
+
+.control-center-dnd slider {
+	background: #2d4f67;
+	border-radius: 8px;
+}
+
+.widget-dnd {
+	margin: 0px;
+	font-size: 0.75rem;
+}
+
+.widget-dnd > switch {
+	font-size: initial;
+	border-radius: 8px;
+	background: #363646;
+	border: 1px solid #2d4f67;
+	box-shadow: none;
+}
+
+.widget-dnd > switch:checked {
+	background: #363646;
+}
+
+.widget-dnd > switch slider {
+	background: #2d4f67;
+	border-radius: 8px;
+	border: 1px solid #717c7c;
+}
+
+.widget-mpris .widget-mpris-player {
+	background: #363646;
+	padding: 7px;
+}
+
+.widget-mpris .widget-mpris-title {
+	font-size: 1.2rem;
+}
+
+.widget-mpris .widget-mpris-subtitle {
+	font-size: 0.8rem;
+}
+
+.widget-menubar > box > .menu-button-bar > button > label {
+	font-size: 3rem;
+	padding: 0.5rem 1.25rem;
+}
+
+.widget-menubar > box > .menu-button-bar > :last-child {
+	color: #e46876;
+}
+
+.power-buttons button:hover,
+.powermode-buttons button:hover,
+.screenshot-buttons button:hover {
+	background: #363646;
+}
+
+.control-center .widget-label > label {
+	color: #c8c093;
+	font-size: 1.25rem;
+}
+
+.widget-buttons-grid {
+	padding-top: 0.5rem;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button label {
+	font-size: 1.75rem;
+}
+
+.widget-volume {
+	padding-top: 0.5rem;
+}
+
+.widget-volume label {
+	font-size: 1rem;
+	color: #658594;
+}
+
+.widget-volume trough highlight {
+	background: #658594;
+}
+
+.widget-backlight trough highlight {
+	background: #e6c384;
+}
+
+.widget-backlight label {
+	font-size: 1rem;
+	color: #e6c384;
+}
+
+.widget-backlight .KB {
+	padding-bottom: 0.5rem;
+}
+
+.image {
+	padding-right: 0.5rem;
+}

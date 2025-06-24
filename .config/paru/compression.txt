@@ -1,0 +1,14 @@
+unace
+unrar
+p7zip
+sharutils
+uudeview
+arj
+cabextract
+lzip
+zlib
+laszip
+lbzip2
+lrzip
+pbzip2
+lzop

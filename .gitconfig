@@ -1,0 +1,89 @@
+[user]
+	name = Jerry Augusto
+	; email = 47633560+jerryaugusto@users.noreply.github.com
+	email = jerryaugustodev@gmail.com
+	; signingKey = 0E9034467A951DA8
+	signingKey = 57F4B7E516D21D40
+
+[core]
+	editor = nvim
+	excludesFile = $HOME/.gitignore_global
+	pager = delta
+	symlinks = true
+
+[commit]
+	gpgSign = true
+
+[tag]
+	gpgSign = true
+
+[init]
+	defaultBranch = main
+
+[color]
+	ui = auto
+
+[alias]
+	s = status
+	sb = status -sb
+	del = branch -D
+	col = checkout @{-1}
+	cb = checkout -b
+	co = checkout
+	ll = log --oneline
+	last = log -1 HEAD --stat
+	; cm = commit -m
+	cm = !git add -A && git commit -m
+	dv = difftool -t vimdiff -y
+	search = !git rev-list --all | xargs git grep -F
+	lc = log origin/HEAD --stat --no-merges
+	undo = reset --soft HEAD^
+	hundo = reset HEAD~1 --mixed
+	changes = diff --name-status -r
+	dfs = diff --stat -r
+	new = !sh -c 'git log $1@{1}..$1@{0} \"$@\"'
+	stsh = !CURRENT=$(git symbolic-ref HEAD) && git symbolic-ref HEAD refs/heads/stash && git commit -a -m stashed && git checkout $CURRENT
+	graph = "!f() { echo 'digraph git {' ; git log --pretty='format:  %h -> { %p }' \"$@\" | sed 's/[0-9a-f][0-9a-f]*/\"&\"/g' ; echo '}'; }; f"
+	pl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	abbr = "!sh -c 'git rev-list --all | grep ^$1 | while read commit; do git --no-pager log -n1 --pretty=format:\"%H %ci %an %s%n\" $commit; done' -"
+	dad = !curl https://icanhazdadjoke.com/ && echo
+	allb = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	save = !git add -A && git commit -m 'chore: commit save point'
+	reset = !git reset --hard
+	nah = !git reset --soft HEAD-1
+	wip = "!git add . && git commit -m wip > /dev/null"
+	gclean = !git branch --merged | ripgrep -v * | xargs -n 1 git branch -d
+	done = !git push origin HEAD
+
+  ; Aliases shortcuts
+	alias = "!sh -c '[ $# = 2 ] && git config --global alias.\"$1\" \"$2\" && exit 0 || echo \"usage: git alias <new alias> <original command>\" >&2 && exit 1' -"
+	aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+
+  ; Some submodule related aliases
+	sup = submodule update --init --recursive
+	colz = !git checkout @{-1} && git submodule update --init --recursive
+	comz = !git checkout master && git submodule update --init --recursive
+	plz = !git pull && git submodule update --init --recursive
+	project-summary = !which onefetch && onefetch
+
+[interactive]
+	diffFilter = delta --color-only --features=interactive
+
+[merge]
+	conflictStyle = zdiff3
+
+[diff]
+	colorMoved = default
+
+[help]
+	autocorrect = 20
+
+[include]
+	path = $HOME/.config/delta/themes/kanagawa.gitconfig
+
+[delta]
+	navigate = true
+	features = kanagawa
+	side-by-side = true
+[credential]
+	helper = store

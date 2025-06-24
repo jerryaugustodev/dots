@@ -1,0 +1,222 @@
+{
+  "main": {
+    "id": "20008fe3e89954b6",
+    "type": "split",
+    "children": [
+      {
+        "id": "0e4c39e067350f7e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "570135011d517a08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Liber/Bíblia Sagrada.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Bíblia Sagrada"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "94b65bcd34ec47a4",
+    "type": "split",
+    "children": [
+      {
+        "id": "b29686c673f62411",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9a469da513563e0f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "deed6f730d127e95",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "0fb13529f59a5154",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 445.5
+  },
+  "right": {
+    "id": "83e83330f4275442",
+    "type": "split",
+    "children": [
+      {
+        "id": "eefe5e5b3ee8321b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d142c96a9111837a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Welcome.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Welcome"
+            }
+          },
+          {
+            "id": "d21eca4f17d32469",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Welcome.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Welcome"
+            }
+          },
+          {
+            "id": "d887ac1b4ffb11c4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "2fd3f7236f5ee883",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Welcome.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Welcome"
+            }
+          },
+          {
+            "id": "2e2a39aa8649d049",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
+          },
+          {
+            "id": "aacdff0f4d43307a",
+            "type": "leaf",
+            "state": {
+              "type": "review-queue-list-view",
+              "state": {},
+              "icon": "SpacedRepIcon",
+              "title": "Notes Review Queue"
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "zk-prefixer:Create new unique note": false,
+      "obsidian-spaced-repetition:Review flashcards": false
+    }
+  },
+  "active": "570135011d517a08",
+  "lastOpenFiles": [
+    "Liber/Bíblia Sagrada.md",
+    "Vita Intellectualis/Liber/1-202502051045 - A Vida Intelectual.md",
+    "assets/a_vida_intelectual.png",
+    "assets",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/6. Document Object Model (16, 1h56)/01. DOM/Test.md",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/6. Document Object Model (16, 1h56)/01. DOM/_Transcrição.md",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/6. Document Object Model/01. DOM - 16, 1h56m15s/Propriedades.md",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/6. Document Object Model (16, 1h56)/01. DOM",
+    "Untitled.md",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/8. Projeto - Convert",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/7. Depuração de código",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/5. Funções",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/4. Condicionais e controle de fluxo",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/3. Expressões e operadores",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/2. Variáveis e constantes",
+    "Computer Science/Software Engineering/Courses/Rocketseat/Formações/FullStack/5. JavaScript/1. JavaScript Básico/1. Primeiros passos",
+    "Computer Science/Data Science/Courses/Rocketseat/Desenvolvimento de IA",
+    "Computer Science/Software Engineering/Courses/Rocketseat/FullStack/Untitled.md",
+    "Vita Intellectualis/Liber/Entendendo Algoritmos - Um guia ilustrado para programadores e outros curisos.md",
+    "Vita Intellectualis/Liber/Storytelling com dados - um guia sobre visualização de dados para profissionais de negócios.md",
+    "_Tamplates/book-template.md",
+    "Vita Intellectualis/Ars Excerpendi/01. Index/1. Computer Science.md",
+    "A Vida Intelectual.png",
+    "8fd4d9ff70-removebg-preview.png",
+    "Welcome.md"
+  ]
+}

@@ -1,0 +1,279 @@
+## ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█
+## ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀
+## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
+
+# Sets user-defined palette
+palette = "kanagawa"
+
+command_timeout = 1000
+scan_timeout = 1000
+
+# Setups
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$nodejs\
+$elixir\
+$golang\
+$lua\
+$python\
+$aws\
+$container\
+$docker_context\
+$kubernetes\
+$cmd_duration
+$line_break\
+$character\
+"""
+
+# right_format = """
+# $aws\
+# $conda\
+# $container\
+# $docker_context\
+# $elixir\
+# $golang\
+# $git_status\
+# $kubernetes\
+# $lua\
+# $python\
+# $cmd_duration
+# """
+# ${tsx}\
+
+add_newline = true
+
+# Other languages configurations:
+azure.disabled = true
+battery.disabled = true
+c.disabled = true
+cmake.disabled = true
+conda.disabled = true
+crystal.disabled = true
+dotnet.disabled = true
+elixir.disabled = true
+elm.disabled = true
+erlang.disabled = true
+fennel.disabled = true
+# golang.disabled = true
+haskell.disabled = true
+haxe.disabled = true
+helm.disabled = true
+java.disabled = true
+julia.disabled = true
+kotlin.disabled = true
+# lua.disabled = true
+memory_usage.disabled = true
+meson.disabled = true
+nim.disabled = true
+nix_shell.disabled = true
+ocaml.disabled = true
+package.disabled = true
+perl.disabled = true
+# php.disabled = true
+# python.disabled = true
+ruby.disabled = true
+rust.disabled = true
+# nodejs.disabled = true
+
+# Prompt symbols
+[character]
+success_symbol = " [](spring_green bold) " # 
+error_symbol = " [](peach_red bold) "      # 
+vimcmd_symbol = " [](surimi_orange) "
+
+[aws]
+symbol = "󱇶  "                                               #   󰀸 󰅟 
+style = 'bold surimi_orange'
+format = ' [$symbol($profile )(\($region\) )](fg:autumnRed)'
+# format = 'on [$symbol($profile )(\($region\) )]($style) '
+disabled = false
+
+# [c]
+# symbol = " "
+# style = "bold crystal_blue"
+# format = " [$symbol($version)](fg:spring_blue bg:sumi_ink1) "
+# disabled = false
+
+# [conda]
+# symbol = "󰤂 "                                      # 󰤂  󰤂   
+# style = "bold autumn_green"
+# format = " [$symbol$environment](fg:autumn_green)"
+# ignore_base = true
+# disabled = false
+
+[container]
+symbol = " "
+style = "bold red dimmed"
+format = ' [via](fg:old_white) [$symbol \[$name\]](fg:autumnRed)'
+# format = 'on [$symbol \[$name\]]($style) '
+disabled = false
+
+# [custom.tsx]
+# command = ""
+# symbol = " "
+# format = " [$symbol($version)](fg:oni_violet bg:sumi_ink1) "
+# style = "bg:none bg:sumi_ink1"
+# detect_extensions = ["tsx"]
+# disabled = false
+
+# [custom.ts]
+# command = ""
+# format = " [$symbol](fg:sumi_ink1 bg:spring_blue) "
+# style = "blue bold dimmed"
+# detect_extensions = ["ts"]
+# symbol = "󰛦 $output"
+# disabled = false
+
+[cmd_duration]
+min_time = 1
+style = "bold sakura_pink"
+format = " [[󱎫 ](fg:katana_gray)$duration](fg:katana_gray)" # 神 󰥔  󰞌
+disabled = false
+
+[docker_context]
+symbol = "󰡨 "                                                              # 󰡨  
+style = "bold crystal_blue"
+format = " [via](fg:old_white) [$symbol($version)](fg:oni_violet) "
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
+disabled = false
+
+# [elixir]
+# symbol = ' '
+# style = "bold oni_violet"
+# format = " [$symbol($version)](fg:oni_violet bg:sumi_ink1) "
+# disabled = false
+
+[golang]
+symbol = ' '
+style = "bold crystal_blue"
+format = " [via](fg:old_white) [$symbol($version)](fg:spring_blue)"
+disabled = false
+
+[kubernetes]
+symbol = '󱃾 '                                                  # ☸
+style = "bold crystal_blue"
+format = ' [$symbol$context( \($namespace\))](fg:spring_blue)'
+detect_files = ['k8s', "Dockerfile"]
+detect_extensions = ['yaml']
+disabled = false
+[kubernetes.context_aliases]
+'arn:aws:eks:us-west-2:123:cluster/gal-kub-demo-cluster' = 'gal'
+
+[lua]
+symbol = "󰢱 "                                                      #    
+style = "bold oni_violet"
+format = " [via](fg:old_white) [$symbol($version)](fg:oni_violet)"
+disabled = false
+
+[nodejs]
+symbol = "󰋘 "                                                        # 󰋘 󰎙
+style = "bold autumn_green"
+format = " [via](fg:old_white) [$symbol($version)](fg:autumn_green)"
+disabled = false
+
+[python]
+symbol = "󰌠 "                                                                                            #    󰌠
+style = "carp_yellow bold"
+format = ' [via](fg:old_white) [${symbol}${pyenv_prefix}(${version})(\($virtualenv\) )](fg:carp_yellow)'
+disabled = false
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+# "~" = " "
+"Documents" = "󰪷 Docs"      #  󰈚 󰪷 󰈦
+"Downloads" = "󰜯 Downloads" # 󰦗 󰇚
+"Music" = "󰌳 Music"         # 󰝚 󰋌 󰴙
+"Pictures" = "󰈥 Pics"       # 
+"Videos" = "󰴘 Movies"       # 󰌲
+"nvim" = " vim"            # 
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[directory]
+format = " [ ](fg:oni_violet)[ $path](fg:wave_aqua2)" #  󰉋 
+style = "bold sumi_ink1"
+truncation_length = 1
+truncate_to_repo = true
+# truncation_symbol = " …/"
+use_logical_path = true
+fish_style_pwd_dir_length = 3
+disabled = false
+read_only = ' 󰌾'              #    󰌾 
+
+[git_branch]
+format = " [on](fg:old_white) [[ ](fg:oni_violet)$branch](fg:oni_violet)" #     󰹦  
+style = "bold oni_violet"
+always_show_remote = true
+
+[git_status]
+# $all status$ahead_behind
+format = ' ([\[$all_status$ahead_behind\]](fg:wave_red))'
+# style = "surimi_orange"
+conflicted = "=" # 󰿡
+ahead = ""      # 󰬬 ⇡ 󰁝
+behind = ""     # 󰬦 ⇣
+diverged = "󰹹"   # 󰿣 󰬬  ⇕
+up_to_date = ""  #
+untracked = "?"  # 󰅙 ?
+stashed = ""    # 󰗠 $
+modified = "󱈸"   # 󱍷 !
+staged = ""     # 󰐗 +
+renamed = "»"    # 󰀨
+deleted = ""    #  󰍶 
+
+[git_commit]
+format = ' [\($hash$tag\)](fg:spring_green)'
+style = "bold spring_green"
+commit_hash_length = 7
+tag_symbol = ""
+only_detached = true
+disabled = false
+
+# THEME
+[palettes.kanagawa]
+fuji_white = "#DCD7BA"    # Default foreground
+old_white = "#C8C093"     # Dark foreground (statuslines)
+sumi_ink0 = "#16161D"     # Dark background (statuslines and floating windows)
+sumi_ink1 = "#1F1F28"     # Default background
+sumi_ink2 = "#2A2A37"     # Lighter background (colorcolumn, folds)
+sumi_ink3 = "#363646"     # Lighter background (cursorline)
+sumi_ink4 = "#54546D"     # Darker foreground (line numbers, fold column, non-text characters), float borders
+wave_blue1 = "#223249"    # Popup background, visual selection background
+wave_blue2 = "#2D4F67"    # Popup selection background, search background
+winterGreen = "#2B3328"   # Diff Add (background)
+winterYellow = "#49443C"  # Diff Change (background)
+winterRed = "#43242B"     # Diff Deleted (background)
+winterBlue = "#252535"    # Diff Line (background)
+autumn_green = "#76946A"  # Git Add
+autumn_red = "#C34043"    # Git Delete
+autumnYellow = "#DCA561"  # Git Change
+samuraiRed = "#E82424"    # Diagnostic Error
+ronin_yellow = "#FF9E3B"  # Diagnostic Warning
+waveAqua1 = "#6A9589"     # Diagnostic Info
+dragonBlue = "#658594"    # Diagnostic Hint
+fujiGray = "#727169"      # Comments
+springViolet1 = "#938AA9" # Light foreground
+oni_violet = "#957FB8"    # Statements and Keywords
+crystal_blue = "#7E9CD8"  # Functions and Titles
+springViolet2 = "#9CABCA" # Brackets and punctuation
+spring_blue = "#7FB4CA"   # Specials and builtin functions
+lightBlue = "#A3D4D5"     # Not used
+wave_aqua2 = "#7AA89F"    # Types
+spring_green = "#98BB6C"  # Strings
+boat_yellow1 = "#938056"  # Not used
+boat_yellow2 = "#C0A36E"  # Operators, RegEx
+carp_yellow = "#E6C384"   # Identifiers
+sakura_pink = "#D27E99"   # Numbers
+wave_red = "#E46876"      # Standout specials 1 (builtin variables)
+peach_red = "#FF5D62"     # Standout specials 2 (exception handling, return)
+surimi_orange = "#FFA066" # Constants, imports, booleans
+katana_gray = "#717C7C"   # Deprecated

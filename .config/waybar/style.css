@@ -1,0 +1,174 @@
+@import "kanagawa.css";
+
+* {
+  /* font-family: "Cartograph CF", monospace; */
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 12px;
+  min-height: 0;
+}
+
+#waybar {
+  /* background: transparent; */
+  /* background-color: shade(@mantle, 0.9); */
+  background: rgba(31, 31, 40, 0.25); /* sumiInk1 */
+  /* border: 1px solid alpha(@sumiInk0, 0.9); */
+  color: @oldWhite;
+  /* margin: 50px; */
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  /* background-color: @sumiInk4; */
+  background-color: @sumiInk1;
+  margin-left: 1rem;
+}
+
+#workspaces button {
+  /* color: @overlay0; */
+  color: @sumiInk4;
+  font-weight: bold;
+  border-radius: 1rem;
+  padding: 0 0.3rem;
+  /* margin: 0.2rem; */
+}
+
+#workspaces button.active {
+  color: @oniViolet;
+  border-radius: 1rem;
+}
+
+#workspace button.empty {
+  color: @fujiWhite;
+  border-radius: 1rem;
+}
+
+#workspace button.persistent {
+  color: @springGreen;
+  border-radius: 1rem;
+}
+
+#workspace button.special {
+  color: @sumiInk0;
+  border-radius: 1rem;
+}
+
+#workspace button.visible {
+  color: @sakuraPink;
+  border-radius: 1rem;
+}
+
+#workspaces button.urgent {
+  color: @peachRed;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @lightBlue;
+  border-radius: 1rem;
+}
+
+#custom-music,
+#cpu,
+#memory,
+#disk,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+/* #custom-launcher, */
+#custom-updates,
+#custom-lock,
+#custom-power {
+  /* background-color: @sumiInk4; */
+  background-color: @sumiInk1;
+  padding: 0.375rem 0.75rem;
+  margin: 5px 0;
+}
+
+#custom-launcher {
+  background: none;
+  color: @crystalBlue;
+  margin: 0 1rem;
+  font-size: 18px;
+}
+
+#cpu {
+  color: @surimiOrange;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#disk {
+  color: @waveRed;
+}
+
+#memory {
+  color: @katanaGray;
+  border-radius: 0px 1rem 1rem 0px;
+  /* margin-right: 1rem; */
+}
+
+#clock {
+  color: @sakuraPink;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#battery {
+  color: @springGreen;
+}
+
+#battery.charging {
+  color: @springGreen;
+}
+
+#battery.warning:not(.charging) {
+  color: @peachRed;
+}
+
+#network {
+  color: @surimiOrange;
+}
+
+#custom-updates {
+  color: @oniViolet;
+}
+
+#backlight {
+  color: @carpYellow;
+}
+
+#backlight,
+#battery {
+  border-radius: 0;
+}
+
+#pulseaudio {
+  color: @waveRed;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#custom-music {
+  color: @fujiWhite;
+  border-radius: 1rem;
+}
+
+#custom-lock {
+  border-radius: 1rem 0px 0px 1rem;
+  color: @springBlue;
+}
+
+#custom-power {
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @peachRed;
+}
+
+#tray {
+  margin-left: 1rem;
+  border-radius: 1rem;
+}

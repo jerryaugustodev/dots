@@ -1,0 +1,10 @@
+ttf-maple
+ttf-jetbrains-mono-git
+ttf-jetbrains-mono-nerd
+noto-fonts-emoji-git
+noto-fonts
+ttf-liberation
+ttf-droid
+ttf-djavu
+adobe-source-sans-fonts
+

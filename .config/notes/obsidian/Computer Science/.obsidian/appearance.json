@@ -1,0 +1,11 @@
+{
+  "cssTheme": "Minimal",
+  "theme": "obsidian",
+  "showViewHeader": true,
+  "showRibbon": false,
+  "nativeMenus": false,
+  "baseFontSize": 16,
+  "interfaceFontFamily": "Inter",
+  "monospaceFontFamily": "JetBrains Mono",
+  "textFontFamily": "Georgia"
+}

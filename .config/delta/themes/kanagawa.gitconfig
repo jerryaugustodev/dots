@@ -1,0 +1,30 @@
+[delta "kanagawa"]
+	blame-palette = "#1F1F28 #16161D #11111b #2A2A37 #363646"
+	commit-decoration-style = "#2D4F67" bold box ul
+	dark = true
+	file-decoration-style = "#2D4F67"
+	file-style = "#DCD7BA"
+	hunk-header-decoration-style = "#2D4F67" box ul
+	hunk-header-file-style = bold
+	hunk-header-line-number-style = bold "#C8C093"
+	hunk-header-style = file line-number syntax
+	line-numbers-left-style = "#2D4F67"
+	line-numbers-minus-style = bold "#E46876"
+	line-numbers-plus-style = bold "#98BB6C"
+	line-numbers-right-style = "#2D4F67"
+	line-numbers-zero-style = "#2D4F67"
+	# 25% red 75% base
+	minus-emph-style = bold syntax "#E82424"
+	# 10% red 90% base
+	minus-style = syntax "#C34043"
+	# 25% green 75% base
+	plus-emph-style = bold syntax "#76946A"
+	# 10% green 90% base
+	plus-style = syntax "#98BB6C"
+	map-styles = \
+		bold purple => syntax "#957FB8", \
+		bold blue => syntax "#7FB4CA", \
+		bold cyan => syntax "#7AA89F", \
+		bold yellow => syntax "#FF9E3B"
+	# Should match the name of the bat theme
+	syntax-theme = Kanagawa

@@ -1,0 +1,149 @@
+{
+	"layer": "top", // Waybar at top layer
+	"position": "top", // Waybar position (top|bottom|left|right)
+	// "width": 1280, // Waybar width
+	// Choose the order of the modules
+	"modules-left": ["custom/launcher", "hyprland/workspaces"],
+	"modules-center": ["custom/music"],
+	"modules-right": [
+		"cpu",
+		"disk",
+		"memory",
+		"tray",
+		"pulseaudio",
+		"custom/updates",
+		"backlight",
+		"network",
+		"battery",
+		"clock"
+		// "custom/lock",
+		// "custom/power"
+	],
+	"custom/launcher": {
+		"format": " ",
+		"on-click": "rofi -show drun",
+		"on-click-right": "wlogout &"
+	},
+	"hyprland/workspaces": {
+		"active-only": false,
+		"all-outputs": true,
+		"disable-scroll": true,
+		// "sort-by-name": true,
+		"format": " {icon} ",
+		"format-icons": {
+			"1": "󰇩", // 󰇩  一
+			"2": "", //   二
+			"3": "", //  三
+			"4": "", // 四
+			"5": "󰓇", // 󰓇  五
+			"6": "六",
+			"7": "七",
+			"8": "八",
+			"9": "九",
+			"10": "十",
+			// "active": "󰝥",
+			// "default": "󰝥", // 󰮯 󰊠 󰑊 󰗐 󰟃 󱎖 󰪥 󱡓 󰻂 󰻃 󰐾 󰺕 󰝦  󰠠 󱡝
+			// "empty": "󰝥",
+			// "persistent": "󰝥",
+			// "special": "󰝥",
+			"urgent": "告"
+		},
+		"persistent-workspaces": {
+			"*": 5
+		},
+		"sort-by-number": true
+	},
+	"tray": {
+		"icon-size": 16,
+		"spacing": 10
+	},
+	"custom/music": {
+		"format": "󰝚 <span>{}</span>",
+		"return-type": "json",
+		"max-length": 48,
+		"exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+		"on-click-middle": "playerctl play-pause",
+		"on-click": "playerctl previous",
+		"on-click-right": "playerctl next"
+	},
+	"memory": {
+		"format": " {}%", // 󰍛  󰘚
+		"format-alt": " {used}/{total} GiB",
+		"interval": 5
+	},
+	"cpu": {
+		"format": " {usage}%", // 󰻠
+		"format-alt": " {avg_frequency} GHz",
+		"interval": 5
+	},
+	"disk": {
+		"format": "󰋊 {percentage_free}%", // 
+		"format-alt": "󰋊 {used}/{total} GiB",
+		"interval": 5,
+		"path": "/"
+	},
+	"clock": {
+		"timezone": "America/Cuiaba",
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": " {:%d/%m/%Y}", //   
+		"format": " {:%H:%M}" // 
+	},
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "{icon}",
+		"format-icons": ["󰃞", "", "", "", "󰃟", "", "", "", "󰃠"]
+	},
+	"battery": {
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}",
+		"format-charging": "󰂄",
+		"format-plugged": "󰂃",
+		"format-alt": "{icon}",
+		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+	},
+	"pulseaudio": {
+		// "scroll-step": 1, // %, can be a float
+		"format": "{icon} {volume}%",
+		"format-muted": " ",
+		"format-icons": {
+			"default": ["", "", ""]
+		},
+		"on-click": "/home/araujo/.config/hypr/scripts/volume_ctl.sh mute"
+		// "on-click": "pavucontrol"
+	},
+	"custom/lock": {
+		"tooltip": false,
+		// "on-click": "sh -c '(sleep 0.5s; swaylock --grace 0)' & disown",
+		"on-click": "/home/araujo/.config/hypr/scripts/lock.sh",
+		"format": "󰌾" //  
+	},
+	"custom/power": {
+		"tooltip": false,
+		"on-click": "wlogout &",
+		"format": " " // 󰐥
+	},
+	"network": {
+		"format-wifi": "󰤨",
+		"format-alt": "󰤨 {essid}",
+		"format-ethernet": "󰈀 {essid}",
+		"format-linked": "{ifname} (No IP) 󰈁",
+		"format-disconnected": "󰤭 Disconnected",
+		"tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+		"on-click": "wofi-wifi-menu"
+	},
+	"custom/caffeine": {
+		"exec": "~/.config/waybar/scripts/caffeine.sh",
+		"return-type": "json",
+		"interval": 3,
+		"format-icons": ["󰾫", "󰅶"],
+		"format": "{icon}"
+	},
+	"custom/updates": {
+		"exec": "(checkupdates ; paru -Qua) | wc -l",
+		"interval": 7200,
+		"format": "󰏔 {}" // 󰚰    󰓦  󰏔
+	}
+}

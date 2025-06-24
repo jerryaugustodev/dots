@@ -1,0 +1,163 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 0,
+  "modules-left": [
+    "custom/launcher",
+    "clock",
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
+    "hyprland/window"
+  ],
+  "modules-right": [
+    "tray",
+    "custom/caffeine",
+    "custom/updates",
+    "custom/language",
+    "network",
+    "backlight",
+    "pulseaudio",
+    "battery"
+  ],
+  // "custom/notification": {
+  //   "tooltip": true,
+  //   "format": "{} {icon}",
+  //   "format-icons": {
+  //     "notification": "<span foreground='#f38ba8'><sup></sup></span>",
+  //     "none": "",
+  //     "dnd-notification": "<span foreground='#f38ba8'><sup></sup></span>",
+  //     "dnd-none": "",
+  //     "inhibited-notification": "<span foreground='#f38ba8'><sup></sup></span>",
+  //     "inhibited-none": "",
+  //     "dnd-inhibited-notification": "<span foreground='#f38ba8'><sup></sup></span>",
+  //     "dnd-inhibited-none": "",
+  //   },
+  //   "return-type": "json",
+  //   "exec-if": "which swaync-client",
+  //   "exec": "swaync-client -swb",
+  //   "on-click": "swaync-client -t -sw",
+  //   "on-click-right": "swaync-client -d -sw",
+  //   "escape": true,
+  // },
+  "custom/launcher": {
+    "format": "󰣇",
+    "on-click": "killall rofi || rofi -show drun",
+    //    "on-click": "wofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
+    "on-click-right": "bash $HOME/.config/rofi/scripts/power"
+    //    "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"
+  },
+  "hyprland/window": {
+    "format": "{}"
+  },
+  "hyprland/workspaces": {
+    "active-only": true,
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "format": "{name}: {icon}",
+    "format-icons": {
+      "1": "󰇩", // 
+      "2": "", // 
+      "3": "",
+      "4": "",
+      "5": "󰣙",
+      "default": "", // 
+      "urgent": "",
+      "active": "" // 
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+  "custom/caffeine": {
+    "exec": "~/.config/waybar/scripts/caffeine.sh",
+    "return-type": "json",
+    "interval": 3,
+    "format-icons": [
+      "󰾫",
+      "󰅶"
+    ],
+    "format": "{icon}"
+  },
+  "custom/updates": {
+    "exec": "(checkupdates ; paru -Qua) | wc -l",
+    "interval": 7200,
+    "format": "󰏔 {}" // 󰚰    󰓦 
+  },
+  "custom/language": {
+    "exec": "cat /tmp/kb_layout",
+    "interval": 3,
+    "format": "  {}" //   󰌌
+  },
+  "tray": {
+    "icon-size": 13,
+    "spacing": 10
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+    "on-scroll-up": "brightnessctl set 1%+",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "min-length": 6,
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon}{capacity}%",
+    "format-charging": "󰉁 {capacity}%", // 
+    "format-plugged": "󰚥 {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
+    // "format-icons": ["󱃍", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󱃌"],
+  },
+  "clock": {
+    "format": "󰥔 {:%H:%M}",
+    // "format": "{:%R  %d/%m}", //  󰥔
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "󰥔 {:%H:%M   %d/%m}"
+  },
+  "network": {
+    "format-wifi": "󰤨",
+    "format-alt": "󰤨 {essid}",
+    "format-ethernet": "󰈀 {essid}",
+    "format-linked": "{ifname} (No IP) 󰈁",
+    "format-disconnected": "󰈂 Disconnected",
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}% | Down Speed: {bandwidthDownBits}, Up Speed: {bandwidthUpBits}",
+    "on-click": "wofi-wifi-menu"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "ﱝ Muted",
+    "on-click": "/home/amitgold/.config/hypr/scripts/volume_ctl.sh mute",
+    "scroll-step": 1,
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
+      "default": [
+        "󰸈",
+        "󰖀 ",
+        "󰕾 ",
+        " "
+      ] //  
+    }
+  }
+}

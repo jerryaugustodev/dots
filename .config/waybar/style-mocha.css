@@ -1,0 +1,172 @@
+@import "mocha.css";
+
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 12px;
+  min-height: 0;
+}
+
+#waybar {
+  /* background: transparent; */
+  /* background-color: shade(@mantle, 0.9); */
+  background: rgba(30, 30, 46, 0.25);
+  /* border: 1px solid alpha(@crust, 0.9); */
+  color: @text;
+  /* margin: 50px; */
+}
+
+#workspaces {
+  border-radius: 1rem;
+  margin: 5px;
+  /* background-color: @surface0; */
+  background-color: @base;
+  margin-left: 1rem;
+}
+
+#workspaces button {
+  /* color: @overlay0; */
+  color: @surface0;
+  border-radius: 1rem;
+  padding: 0 0.3rem;
+  /* margin: 0.2rem; */
+}
+
+#workspaces button.active {
+  color: @mauve;
+  border-radius: 1rem;
+}
+
+#workspace button.empty {
+  color: @text;
+  border-radius: 1rem;
+}
+
+#workspace button.persistent {
+  color: @green;
+  border-radius: 1rem;
+}
+
+#workspace button.special {
+  color: @crust;
+  border-radius: 1rem;
+}
+
+#workspace button.visible {
+  color: @pink;
+  border-radius: 1rem;
+}
+
+#workspaces button.urgent {
+  color: @red;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
+#custom-music,
+#cpu,
+#memory,
+#disk,
+#tray,
+#backlight,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+/* #custom-launcher, */
+#custom-updates,
+#custom-lock,
+#custom-power {
+  /* background-color: @surface0; */
+  background-color: @base;
+  padding: 0.375rem 0.75rem;
+  margin: 5px 0;
+}
+
+#custom-launcher {
+  background: none;
+  color: @mauve;
+  margin: 0 1rem;
+  font-size: 18px;
+}
+
+#cpu {
+  color: @peach;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#disk {
+  color: @maroon;
+}
+
+#memory {
+  color: @overlay1;
+  border-radius: 0px 1rem 1rem 0px;
+  /* margin-right: 1rem; */
+}
+
+#clock {
+  color: @pink;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+}
+
+#battery {
+  color: @green;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#battery.warning:not(.charging) {
+  color: @red;
+}
+
+#network {
+  color: @peach;
+}
+
+#custom-updates {
+  color: @mauve;
+}
+
+#backlight {
+  color: @yellow;
+}
+
+#backlight,
+#battery {
+  border-radius: 0;
+}
+
+#pulseaudio {
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
+}
+
+#custom-music {
+  color: @text;
+  border-radius: 1rem;
+}
+
+#custom-lock {
+  border-radius: 1rem 0px 0px 1rem;
+  color: @lavender;
+}
+
+#custom-power {
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @red;
+}
+
+#tray {
+  margin-left: 1rem;
+  border-radius: 1rem;
+}
