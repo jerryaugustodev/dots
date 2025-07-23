@@ -1,8 +1,6 @@
 [user]
 	name = Jerry Augusto
-	; email = 47633560+jerryaugusto@users.noreply.github.com
 	email = jerryaugustodev@gmail.com
-	; signingKey = 0E9034467A951DA8
 	signingKey = 57F4B7E516D21D40
 
 [core]
@@ -33,6 +31,7 @@
 	ll = log --oneline
 	last = log -1 HEAD --stat
 	; cm = commit -m
+	c = git commit --verbose -m
 	cm = !git add -A && git commit -m
 	dv = difftool -t vimdiff -y
 	search = !git rev-list --all | xargs git grep -F
@@ -85,5 +84,5 @@
 	navigate = true
 	features = kanagawa
 	side-by-side = true
-[credential]
-	helper = store
+; [credential]
+; 	helper = store

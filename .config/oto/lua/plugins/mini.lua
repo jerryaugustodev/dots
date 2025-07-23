@@ -1,12 +1,12 @@
 return {
-	{
-		"echasnovski/mini.bracketed",
-		version = "*",
-		event = { "VeryLazy" },
-		config = function()
-			require("configs.bracketed")
-		end,
-	},
+	-- {
+	-- 	"echasnovski/mini.bracketed",
+	-- 	version = "*",
+	-- 	event = { "VeryLazy" },
+	-- 	config = function()
+	-- 		require("configs.bracketed")
+	-- 	end,
+	-- },
 	{
 		"echasnovski/mini.clue",
 		-- event = { "CmdlineEnter", "CursorHold", "CursorHoldI" },
@@ -48,12 +48,12 @@ return {
 			require("configs.mini.files")
 		end,
 	},
-	{
-		"echasnovski/mini.fuzzy",
-		version = "*",
-		event = "VeryLazy",
-		config = function() end,
-	},
+	-- {
+	-- 	"echasnovski/mini.fuzzy",
+	-- 	version = "*",
+	-- 	event = "VeryLazy",
+	-- 	config = function() end,
+	-- },
 	{
 		"echasnovski/mini-git",
 		version = "*",
@@ -64,7 +64,7 @@ return {
 				function()
 					MiniGit.show_at_cursor()
 				end,
-				"Git show at cursor",
+				desc = "Git show at cursor",
 			},
 		},
 		cond = function()
@@ -133,6 +133,8 @@ return {
 	-- 		require("mini.visits").setup()
 	-- 	end,
 	-- },
+
+	-- BUG This bugs float windows
 	-- {
 	-- 	"echasnovski/mini.statusline",
 	-- 	version = "*",

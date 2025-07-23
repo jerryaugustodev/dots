@@ -9,6 +9,7 @@
 --- npm i -g oxlint
 --- ```
 
+-- local util = require("configs.lspconfig.util")
 local util = require("lspconfig.util")
 local blink = require("blink.cmp")
 

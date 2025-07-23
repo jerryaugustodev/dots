@@ -1,50 +1,48 @@
-_G.dd = function(...)
-	Snacks.debug.inspect(...)
-end
-_G.bt = function()
-	Snacks.debug.backtrace()
-end
-vim.print = _G.dd
--- Make sure to setup `mapleader` and `maplocalleader` before
--- loading lazy.nvim so that mappings are correct.
--- This is also a good place to setup other settings (vim.opt)
-require("options")
+-- Disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
--- Bootstrap lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-	if vim.v.shell_error ~= 0 then
-		vim.api.nvim_echo({
-			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-			{ out, "WarningMsg" },
-			{ "\nPress any key to exit..." },
-		}, true, {})
-		vim.fn.getchar()
-		os.exit(1)
-	end
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+require "options"
+require "mappings"
+require "autocmds"
+
+-- This section ensures that lazy.nvim is installed and ready to use.
+local lazypath = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+
+if not vim.uv.fs_stat(lazypath) then
+    local repo = "https://github.com/folke/lazy.nvim.git"
+    vim.notify("Cloning lazy.nvim...", vim.log.levels.INFO)
+    vim.fn.system { "git", "clone", "--filter=blob:none", repo, "--branch=stable", lazypath }
 end
+
 vim.opt.rtp:prepend(lazypath)
 
--- Setup lazy.nvim
-local lazy_config = require("configs.lazy")
+local lazy_config = require "configs.lazy"
+
+-- load plugins
 require("lazy").setup({
-	-- import your plugins
-	{ import = "plugins" },
+    -- Kanagawa the - G O A T - colorscheme ever!
+    {
+        "rebelot/kanagawa.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require "configs.kanagawa"
+        end,
+        init = function()
+            vim.cmd.colorscheme("kanagawa")
+        end,
+    },
+
+    { import = "plugins" },
 }, lazy_config)
 
--- vim.cmd("set runtimepath+=~/dots/.config/nvim/lua")
--- require("neotheme").setup()
--- vim.cmd("colorscheme neotheme")
 
-require("autocmds")
-require("keymaps")
 
 if vim.g.neovide then
-	require("neovide")
+    require "neovide"
 end
 
-if vim.g.vscode then
-	require("vscode")
-end

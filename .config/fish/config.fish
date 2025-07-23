@@ -9,7 +9,7 @@ if test -f $HOME/dots/.config/fish/aliases/main.fish
 end
 
 if test -f $HOME/dots/.config/fish/aliases/abbr.fish
-  source $HOME/dots/.config/fish/aliases/abbr.fish
+    source $HOME/dots/.config/fish/aliases/abbr.fish
 end
 
 # Load private config
@@ -34,7 +34,7 @@ end
 
 # Ghostty
 if test -f $GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
-  source $GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
+    source $GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
 end
 
 # Starship
@@ -42,6 +42,10 @@ starship init fish | source
 
 # Zoxide cd alternative
 zoxide init fish | source
+
+# Fuzzy Finder
+# Set up fzf key bindings
+fzf --fish | source
 
 # mise
 #mise activate fish | source
